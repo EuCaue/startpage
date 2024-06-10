@@ -1,0 +1,152 @@
+:root {
+  --background: #141b1e;
+  --lighter-background: #232a2d;
+  --red: #e57474;
+  --green: #8ccf7e;
+  --yellow: #e5c76b;
+  --blue: #67b0e8;
+  --magenta: #c47fd5;
+  --cyan: #6cbfbf;
+  --light-gray: #b3b9b8;
+  --foreground: #dadada;
+  --columns: 3;
+  --font-name: monospace;
+  --font-size: 1.4rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-name);
+  font-size: var(--font-size);
+  position: relative;
+}
+
+aside {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+input {
+  display: block;
+  outline: none;
+  padding: 0.525rem;
+  text-align: center;
+  transition: border-color 100ms linear;
+  background-color: var(--lighter-background);
+}
+
+input[type="search"] {
+  border: 1px solid tranparent;
+  outline: none;
+  &:is(:hover, :focus-within, :focus-visible, :focus, :active) {
+    border: 1px solid var(--blue);
+  }
+}
+
+input[type="submit"] {
+  border: 2px solid tranparent;
+  &:is(:hover, :focus-within, :focus-visible, :focus, :active) {
+    border: 2px solid var(--yellow);
+  }
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  min-height: 50%;
+}
+
+ul {
+  display: block;
+  background-color: var(--lighter-background);
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 5px 0px var(--green);
+
+  li {
+    margin: 0.8rem;
+  }
+}
+
+a {
+  display: block;
+
+  &:is(:hover, :focus-within, :focus-visible, :focus) {
+    transition:
+      color 400ms cubic-bezier(0.19, 1, 0.22, 1),
+      text-decoration 150ms ease-in,
+      scale 200ms;
+
+    color: var(--blue);
+    text-decoration: underline;
+    scale: 1.0735;
+  }
+}
+
+kbd {
+  font-weight: bold;
+  color: var(--foreground);
+  background: var(--lighter-background);
+  padding: 0.5rem;
+}
+
+dialog[open] {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
+  height: 30%;
+  box-shadow: 0px 0px 2px 2px var(--cyan);
+  background: var(--background);
+  color: var(--foreground);
+  &::backdrop {
+    backdrop-filter: blur(10px);
+  }
+
+  h3 {
+    align-self: center;
+    font-weight: bold;
+  }
+
+  button {
+    color: var(--foreground);
+    background: var(--lighter-background);
+    padding: 0.5rem;
+    align-self: center;
+    outline: none;
+    border: 1px solid transparent;
+    transition:
+      font-weight 100ms ease-in,
+      border-color 100ms ease-in-out;
+    &:is(:focus-within, :focus-visible, :active, :hover) {
+      font-weight: bold;
+      border: 1px solid var(--red);
+    }
+  }
+}
+
+div {
+  position: fixed;
+  top: 97%;
+  left: 72%;
+}
