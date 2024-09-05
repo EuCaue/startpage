@@ -4,21 +4,21 @@ const searchInput = document.querySelector("input[type='search']");
  * @param {KeyboardEvent} event **KeyboardEvent**
  */
 function handleKeypress(event) {
-  const { key, keyCode } = event;
+  const { key } = event;
   if (document.activeElement === searchInput) {
-    if (key === "Escape" || keyCode === 27) {
+    if (key === "Escape") {
       searchInput.blur();
     }
     return;
   }
 
-  if (key === "Escape" || keyCode === 27) {
+  if (key === "Escape") {
     document.activeElement.blur();
   }
-  if (key === "s" || key === "i" || keyCode === 83 || keyCode === 73) {
+  if (key === "s" || key === "i") {
     searchInput.focus();
   }
-  if (key === "?" || keyCode === 191) {
+  if (key === "?") {
     toggleHelpMenu();
   }
 }
