@@ -1,17 +1,37 @@
+/* :root { */
+/*   --background: #141b1e; */
+/*   --lighter-background: #232a2d; */
+/*   --red: #e57474; */
+/*   --green: #8ccf7e; */
+/*   --yellow: #e5c76b; */
+/*   --blue: #67b0e8; */
+/*   --magenta: #c47fd5; */
+/*   --cyan: #6cbfbf; */
+/*   --light-gray: #b3b9b8; */
+/*   --foreground: #dadada; */
+/*   --columns: 3; */
+/*   --font-name: monospace; */
+/*   --font-size: 1.4rem; */
+/*   --card-shadow: var(--green) */
+/*   --radius: 0px; */
+/* } */
+
 :root {
-  --background: #141b1e;
-  --lighter-background: #232a2d;
-  --red: #e57474;
-  --green: #8ccf7e;
-  --yellow: #e5c76b;
-  --blue: #67b0e8;
-  --magenta: #c47fd5;
-  --cyan: #6cbfbf;
-  --light-gray: #b3b9b8;
-  --foreground: #dadada;
+  --background: #242424;
+  --lighter-background: #383838;
+  --red: #c01c28;
+  --green: #3a944a;
+  --yellow: #f6d32d;
+  --blue: #3584e4;
+  --magenta: #9141ac;
+  --cyan: #2190a4;
+  --light-gray: #6f8396;
+  --foreground: #ffffff;
   --columns: 3;
   --font-name: monospace;
   --font-size: 1.4rem;
+  --radius: 12px;
+  --card-shadow: rgb(0 0 0 / 36%);
 }
 
 body {
@@ -46,20 +66,22 @@ input {
   outline: none;
   padding: 0.525rem;
   text-align: center;
-  transition: border-color 100ms linear;
+  transition: border-color 280ms ease;
   background-color: var(--lighter-background);
+  border-radius: var(--radius);
 }
 
 input[type="search"] {
-  border: 1px solid tranparent;
+  border: 2px solid transparent;
   outline: none;
   &:is(:hover, :focus-within, :focus-visible, :focus, :active) {
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
   }
 }
 
 input[type="submit"] {
-  border: 2px solid tranparent;
+  border: 2px solid transparent;
+  padding: 0.725rem;
   &:is(:hover, :focus-within, :focus-visible, :focus, :active) {
     border: 2px solid var(--yellow);
   }
@@ -80,7 +102,8 @@ ul {
   background-color: var(--lighter-background);
   height: 100%;
   width: 100%;
-  box-shadow: 1px 5px 0px var(--green);
+  box-shadow: 6px 6px 0px var(--card-shadow);
+  border-radius: var(--radius);
 
   li {
     margin: 0.8rem;
@@ -107,6 +130,7 @@ kbd {
   color: var(--foreground);
   background: var(--lighter-background);
   padding: 0.5rem;
+  border-radius: var(--radius);
 }
 
 dialog[open] {
@@ -116,9 +140,10 @@ dialog[open] {
   flex-direction: column;
   width: 30%;
   height: 30%;
-  box-shadow: 0px 0px 2px 2px var(--cyan);
+  box-shadow: 0px 0px 2px 2px RGB(0 0 0 / 36%);
   background: var(--background);
   color: var(--foreground);
+  border-radius: var(--radius);
   &::backdrop {
     backdrop-filter: blur(10px);
   }
@@ -132,14 +157,12 @@ dialog[open] {
     color: var(--foreground);
     background: var(--lighter-background);
     padding: 0.5rem;
+    border-radius: var(--radius);
     align-self: center;
     outline: none;
     border: 1px solid transparent;
-    transition:
-      font-weight 100ms ease-in,
-      border-color 100ms ease-in-out;
+    transition: border-color 400ms ease-in-out;
     &:is(:focus-within, :focus-visible, :active, :hover) {
-      font-weight: bold;
       border: 1px solid var(--red);
     }
   }
