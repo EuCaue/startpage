@@ -14,11 +14,9 @@
 
 ## About
 
-This is my **Firefox start page**, created using pure `HTML/CSS/JS` with the
-[Everblush colorscheme](https://github.com/Everblush) to ensure accessibility
-and keyboard-driven functionality.
+This is my **Firefox start page**, created using pure `HTML/CSS/JS` with the Adwaita-ish colorscheme
+to ensure accessibility and keyboard-driven functionality.
 
-Designed to be simple and customizable, feel free to fork it and make
-any modifications you want!
+Designed to be simple and customizable, feel free to fork it and make any modifications you want!
 
 Press <kbd>'?'</kbd> to see all available shortcuts.
