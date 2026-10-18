@@ -3,104 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="destyle.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Startpage</title>
   </head>
   <body>
-    <aside>
-      <form action="https://duckduckgo.com/" method="get" target="_top">
-        <input type="search" name="q" placeholder="Search DuckDuckGo" />
-        <input type="submit" value="Search" />
+    <main>
+      <header>
+        <time class="clock" data-clock></time>
+        <p class="date" data-date></p>
+      </header>
+
+      <form
+        class="search"
+        role="search"
+        action="https://duckduckgo.com/"
+        method="get"
+        target="_top"
+      >
+        <input
+          type="search"
+          name="q"
+          placeholder="Search DuckDuckGo"
+          aria-label="Search DuckDuckGo"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
       </form>
-    </aside>
 
-    <nav>
-      <ul>
-        <li><a target="_top" href="https://www.reddit.com">reddit</a></li>
-        <li>
-          <a target="_top" href="https://mail.proton.me/u/1/inbox"
-            >personal email</a
-          >
-        </li>
-        <li>
-          <a target="_top" href="https://mail.proton.me/u/2/inbox"
-            >work email</a
-          >
-        </li>
-        <li><a target="_top" href="https://www.youtube.com">youtube</a></li>
-      </ul>
+      <nav aria-label="Bookmarks">
+        <section aria-labelledby="group-daily">
+          <h2 id="group-daily">daily</h2>
+          <ul>
+            <li><a target="_top" href="https://www.reddit.com">reddit</a></li>
+            <li>
+              <a target="_top" href="https://mail.proton.me/u/1/inbox"
+                >personal email</a
+              >
+            </li>
+            <li>
+              <a target="_top" href="https://mail.proton.me/u/2/inbox"
+                >work email</a
+              >
+            </li>
+            <li><a target="_top" href="https://www.youtube.com">youtube</a></li>
+          </ul>
+        </section>
 
-      <ul>
-        <li><a target="_top" href="https://web.whatsapp.com">whatsapp</a></li>
-        <li><a target="_top" href="https://web.telegram.org/">telegram</a></li>
-        <li>
-          <a target="_top" href="https://www.discord.com/channels/">discord</a>
-        </li>
-        <li><a target="_top" href="https://www.github.com/">github</a></li>
-      </ul>
+        <section aria-labelledby="group-social">
+          <h2 id="group-social">social</h2>
+          <ul>
+            <li>
+              <a target="_top" href="https://web.whatsapp.com">whatsapp</a>
+            </li>
+            <li>
+              <a target="_top" href="https://web.telegram.org/">telegram</a>
+            </li>
+            <li>
+              <a target="_top" href="https://www.discord.com/channels/"
+                >discord</a
+              >
+            </li>
+            <li><a target="_top" href="https://www.github.com/">github</a></li>
+          </ul>
+        </section>
 
-      <ul>
-        <li>
-          <a target="_top" href="https://www.monkeytype.com/">monkeytype</a>
-        </li>
-        <li><a target="_top" href="https://www.linkedin.com/">linkedin</a></li>
-        <li>
-          <a target="_top" href="https://www.99freelas.com.br/projects">99freelas</a>
-        </li>
-        <li>
-          <a target="_top" href="https://ko-fi.com/Manage/">kofi</a>
-        </li>
-      </ul>
+        <section aria-labelledby="group-work">
+          <h2 id="group-work">work</h2>
+          <ul>
+            <li>
+              <a target="_top" href="https://www.monkeytype.com/">monkeytype</a>
+            </li>
+            <li>
+              <a target="_top" href="https://www.linkedin.com/">linkedin</a>
+            </li>
+            <li>
+              <a target="_top" href="https://www.99freelas.com.br/projects"
+                >99freelas</a
+              >
+            </li>
+            <li><a target="_top" href="https://ko-fi.com/Manage/">kofi</a></li>
+          </ul>
+        </section>
 
-      <ul>
-        <li><a target="_top" href="https://chat.openai.com/">chatgpt</a></li>
-        <li>
-          <a target="_top" href="https://claude.ai/chat">claude</a>
-        </li>
-        <li>
-          <a target="_top" href="https://gemini.google.com/app">gemini</a>
-        </li>
-      </ul>
+        <section aria-labelledby="group-ai">
+          <h2 id="group-ai">ai</h2>
+          <ul>
+            <li>
+              <a target="_top" href="https://chat.openai.com/">chatgpt</a>
+            </li>
+            <li><a target="_top" href="https://claude.ai/chat">claude</a></li>
+            <li>
+              <a target="_top" href="https://gemini.google.com/app">gemini</a>
+            </li>
+          </ul>
+        </section>
 
-      <ul>
-        <li>
-          <a target="_top" href="https://www.mercadolivre.com.br/">mercado livre</a>
-        </li>
-        <li>
-          <a target="_top" href="https://shopee.com.br/">shopee</a>
-        </li>
-        <li>
-          <a target="_top" href="https://www.amazon.com.br/">amazon</a>
-        </li>
-      </ul>
+        <section aria-labelledby="group-shop">
+          <h2 id="group-shop">shop</h2>
+          <ul>
+            <li>
+              <a target="_top" href="https://www.mercadolivre.com.br/"
+                >mercado livre</a
+              >
+            </li>
+            <li><a target="_top" href="https://shopee.com.br/">shopee</a></li>
+            <li>
+              <a target="_top" href="https://www.amazon.com.br/">amazon</a>
+            </li>
+          </ul>
+        </section>
 
-      <ul>
-        <li>
-          <a target="_top" href="https://elk.zone/">elk zone</a>
-        </li>
-        <li>
-          <a target="_top" href="https://leetcode.com/problemset/">leetcode</a>
-        </li>
-        <li>
-          <a
-            target="_top"
-            href="https://github.com/EuCaue/gnome-shell-extension-quick-lofi"
-            >quick lofi</a
-          >
-        </li>
-      </ul>
-    </nav>
+        <section aria-labelledby="group-misc">
+          <h2 id="group-misc">misc</h2>
+          <ul>
+            <li><a target="_top" href="https://elk.zone/">elk zone</a></li>
+            <li>
+              <a target="_top" href="https://leetcode.com/problemset/"
+                >leetcode</a
+              >
+            </li>
+            <li>
+              <a
+                target="_top"
+                href="https://github.com/EuCaue/gnome-shell-extension-quick-lofi"
+                >quick lofi</a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </main>
 
-    <dialog>
-      <h3>Shortcut Keys</h3>
-      <p><kbd>i</kbd> || <kbd>s</kbd> - Focus Search Input</p>
-      <p><kbd>Esc</kbd> - Unfocus Search Input</p>
-      <p><kbd>?</kbd> - Toggle this menu</p>
-      <button onclick="toggleHelpMenu()">Close</button>
+    <dialog aria-labelledby="shortcuts-title">
+      <h2 id="shortcuts-title">Shortcuts</h2>
+      <dl>
+        <div>
+          <dt><kbd>s</kbd> <kbd>i</kbd></dt>
+          <dd>Focus search</dd>
+        </div>
+        <div>
+          <dt><kbd>Esc</kbd></dt>
+          <dd>Leave search</dd>
+        </div>
+        <div>
+          <dt><kbd>?</kbd></dt>
+          <dd>Show or hide this list</dd>
+        </div>
+      </dl>
+      <button type="button" data-close-help>Close</button>
     </dialog>
 
-    <div>Press <kbd>?</kbd> to see all available shortcuts</div>
+    <p class="hint">Press <kbd>?</kbd> for shortcuts</p>
   </body>
 </html>
